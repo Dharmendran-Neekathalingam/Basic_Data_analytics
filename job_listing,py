@@ -1,0 +1,13 @@
+ # Excercise to Filter jobs from the Job_lists
+job_roles = [
+    {'role': 'Data Analyst', 'skills': ['Python', 'SQL', 'Data Visualization']},
+    {'role': 'Data Engineer', 'skills': ['Python', 'SQL', 'Snowflake']},
+    {'role': 'Data Scientist', 'skills': ['Python', 'Machine Learning', 'Statistics']}
+]
+Filtered_jobs=[]
+job_skill=['Machine Learning']
+for job in job_roles:
+        if all(skill in job['skills'] for skill in job_skill):
+            Filtered_jobs.append(job['role'])
+print(Filtered_jobs)
+    
